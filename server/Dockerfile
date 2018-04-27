@@ -35,7 +35,7 @@ ADD databases/postgres/module.xml /opt/jboss/keycloak/modules/system/layers/base
 RUN mkdir -p /opt/jboss/keycloak/modules/system/layers/base/org/mariadb/jdbc/main; cd /opt/jboss/keycloak/modules/system/layers/base/org/mariadb/jdbc/main; curl -L http://central.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/$JDBC_MARIADB_VERSION/mariadb-java-client-$JDBC_MARIADB_VERSION.jar > mariadb-jdbc.jar
 ADD databases/mariadb/module.xml /opt/jboss/keycloak/modules/system/layers/base/org/mariadb/jdbc/main
 
-RUN mkdir -p /opt/jboss/keycloak/modules/system/layers/base/com/microsoft/sqlserver/main; cd /opt/jboss/keycloak/modules/system/layers/base/com/microsoft/sqlserver/main; curl -L https://github.com/Microsoft/mssql-jdbc/releases/download/v6.4.0/mssql-jdbc-$JDBC_MARIADB_VERSION.jar > mssql-jdbc.jar
+RUN mkdir -p /opt/jboss/keycloak/modules/system/layers/base/com/microsoft/sqlserver/main; cd /opt/jboss/keycloak/modules/system/layers/base/com/microsoft/sqlserver/main; curl -L https://github.com/Microsoft/mssql-jdbc/releases/download/v6.4.0/mssql-jdbc-$JDBC_MSSQL_VERSION.jar > mssql-jdbc.jar
 ADD databases/mssql/module.xml /opt/jboss/keycloak/modules/system/layers/base/com/microsoft/sqlserver/main
 
 ENV JBOSS_HOME /opt/jboss/keycloak
