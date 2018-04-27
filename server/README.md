@@ -45,6 +45,7 @@ The image will automatically detect what DB to use based on the value of the `DB
 - `POSTGRES` for the Postgres database,
 - `MYSQL` for the MySql database.
 - `MARIADB` for the MariaDB database.
+- `MSSQL` for Microsoft SQL Server database.
 
 If `DB_VENDOR` is not set the startup script will fail with the following error message:
 ```
@@ -59,10 +60,12 @@ Generic variable names can be used to configure any Database type, defaults may 
   - MySQL: `mysql`
   - PostgreSQL: `postgres`
   - MariaDB: `mariadb`
+  - MSSQL: `mssql`
 - `DB_PORT`: Specify port of the database (optional)
   - MySQL: `3306`
   - PostgreSQL: `5432`
   - MariaDB: `3306`
+  - MSSQL: `1433`
 - `DB_DATABASE`: Specify name of the database to use (optional, default is `keycloak`).
 - `DB_USER`: Specify user to use to authenticate to the database (optional, default is `keycloak`).
 - DB_PASSWORD: Specify user's password to use to authenticate to the database (optional, default is `password`).
