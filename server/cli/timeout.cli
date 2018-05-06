@@ -1,0 +1,1 @@
+/system-property=jboss.as.management.blocking.timeout:add(value=1200)
